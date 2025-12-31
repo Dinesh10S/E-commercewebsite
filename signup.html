@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup | Bigg Boss Store</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<div class="signup-box">
+    <h1>Bigg Boss Store</h1>
+    <p class="subtitle">Create your account</p>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="tel" id="phone" placeholder="Phone Number">
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirm" placeholder="Confirm Password">
+
+    <!-- 🔴 IMPORTANT FIX: type="button" -->
+    <button type="button" onclick="signup()" class="signup-btn">
+        Sign Up
+    </button>
+
+    <p class="login-text">
+        Already have an account?
+        <a href="login.html">Login</a>
+    </p>
+
+    <p id="msg"></p>
+</div>
+
+<script src="signup.js"></script>
+</body>
+</html>

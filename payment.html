@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment | Bigg Boss Store</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+<div class="payment-container">
+
+    <h1>Choose Payment Method</h1>
+
+    <div class="amount-box">
+        Payable Amount: ₹<span id="payAmount">0</span>
+    </div>
+
+    <div class="payment-grid">
+
+        <label class="payment-card">
+            <input type="radio" name="payment" value="Google Pay">
+            <div class="pay-row">
+                <div class="pay-icon">🟢</div>
+                <span>Google Pay</span>
+            </div>
+        </label>
+
+        <label class="payment-card">
+            <input type="radio" name="payment" value="PhonePe">
+            <div class="pay-row">
+                <div class="pay-icon">🟣</div>
+                <span>PhonePe</span>
+            </div>
+        </label>
+
+        <label class="payment-card">
+            <input type="radio" name="payment" value="Paytm">
+            <div class="pay-row">
+                <div class="pay-icon">🔵</div>
+                <span>Paytm</span>
+            </div>
+        </label>
+
+        <label class="payment-card">
+            <input type="radio" name="payment" value="Debit / Credit Card">
+            <div class="pay-row">
+                <div class="pay-icon">💳</div>
+                <span>Debit / Credit Card</span>
+            </div>
+        </label>
+
+        <label class="payment-card">
+            <input type="radio" name="payment" value="Cash on Delivery">
+            <div class="pay-row">
+                <div class="pay-icon">💵</div>
+                <span>Cash on Delivery</span>
+            </div>
+        </label>
+
+    </div>
+
+    <button class="pay-btn" onclick="placeOrder()">Place Order</button>
+    <p id="msg"></p>
+
+</div>
+
+<script src="payment.js"></script>
+</body>
+</html>

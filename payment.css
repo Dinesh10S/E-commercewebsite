@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.payment-container {
+    width: 420px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.payment-container h1 {
+    text-align: center;
+    color: #117a65;
+    margin-bottom: 10px;
+}
+
+.amount-box {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* one payment per row */
+.payment-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.payment-card {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    animation: slideUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.payment-card:nth-child(1) { animation-delay: 0.1s; }
+.payment-card:nth-child(2) { animation-delay: 0.2s; }
+.payment-card:nth-child(3) { animation-delay: 0.3s; }
+.payment-card:nth-child(4) { animation-delay: 0.4s; }
+.payment-card:nth-child(5) { animation-delay: 0.5s; }
+
+.payment-card input {
+    margin-right: 12px;
+}
+
+.pay-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pay-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e8f8f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.payment-card span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.payment-card:hover {
+    border-color: #1abc9c;
+}
+
+.payment-card:has(input:checked) {
+    border-color: #1abc9c;
+    background-color: #e8f8f5;
+}
+
+.pay-btn {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pay-btn:hover {
+    background-color: #ff6f61;
+}
+
+#msg {
+    margin-top: 12px;
+    text-align: center;
+    color: red;
+}
+
+/* animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
